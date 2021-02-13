@@ -26,7 +26,6 @@ const ForgotPassword: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
   const { addToast } = useToast();
-  // const history = useHistory();
 
   const handleSubmit = useCallback(
     async (data: ForgotPasswordFormData) => {
@@ -88,7 +87,9 @@ const ForgotPassword: React.FC = () => {
 
             <Input name="email" icon={FiMail} placeholder="E-mail" />
 
-            <Button loading={loading} type="submit">Recuperar</Button>
+            <Button loading={loading} type="submit">
+              Recuperar
+            </Button>
           </Form>
 
           <Link to="/signup">
